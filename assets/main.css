@@ -1,0 +1,203 @@
+/*global css*/
+.mb--15{
+    margin-bottom: 15px;
+}
+.mb--20{
+    margin-bottom: 20px;
+}
+.mb--25{
+    margin-bottom: 25px;
+}
+.mb--30{
+    margin-bottom: 30px;
+}
+.slick-initialized.slick-slider .azp-product-grid{
+    -ms-flex-preferred-size: 100%;
+    flex-basis: 100%;
+    max-width: 100%;
+}
+i{
+    color: red;
+}
+
+/**
+ * Star ratings
+ */
+.star-rating {
+	overflow: hidden;
+	position: relative;
+	height: 1em;
+	line-height: 1;
+	font-size: 1em;
+	width: 5.4em;
+	font-family: "star";
+	margin-bottom: 8px;
+}
+.azp-center-xs .star-rating{
+	transform: translateX(-50%);
+	left: 50%;
+}
+.star-rating::before{
+	content: "\73\73\73\73\73";
+	color: #F4C100;
+	float: left;
+	top: 0;
+	left: 0;
+	position: absolute;
+}
+.star-rating span {
+	color: #F4C100;
+	overflow: hidden;
+	float: left;
+	top: 0;
+	left: 0;
+	position: absolute;
+	padding-top: 1.5em;
+}
+.star-rating span::before {
+	content: "\53\53\53\53\53";
+	top: 0;
+	position: absolute;
+	left: 0;
+}
+
+/*twenty ninteen support*/
+.azp-product-grid .woocommerce-loop-product__title::before{
+	display: none;
+}
+.theme-twentynineteen .azp-product-grid .woocommerce-loop-product__title{
+	font-size: 20px;
+	margin-bottom: 10px;
+}
+.theme-twentynineteen .azp-product-grid .star-rating{
+	margin-bottom: 6px;
+}
+
+/*product grid style: 1*/
+.azp-product-grid .azp-product-image-wrapper{
+    position: relative;
+    overflow: hidden;
+}
+.azp-product-grid .azp-product-image-wrapper .azp-product-image a img{ display: block; }
+.azp-product-grid.style--2 .azp-product-image-wrapper .azp-product-image  a:before{
+    content: '';
+    background-color: rgba(0,0,0,0.25);
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    transition: all 0.3s ease;
+    z-index: 1;
+    opacity: 0;
+}
+.azp-product-grid .onsale{
+    color: #fff;
+    background: #cd1b29;
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    padding: 3px 10px 10px;
+    position: absolute;
+    top: 0px;
+    left: 0;
+    clip-path: polygon(0 0, 100% 0, 100% 75%, 15% 75%, 0 100%, 0% 25%);
+}
+.azp-product-grid .azp-product-image-wrapper:hover .azp-product-image a:before{ opacity: 1; }
+.azp-product-grid .azp-product-price{
+	margin-bottom: 8px;
+}
+.azp-product-grid .azp-product-content{
+	padding: 20px 0 0;
+}
+.azp-product-grid .azp-product-content a{
+    text-decoration: none;
+}
+.azp-product-grid .woocommerce-loop-product__title{
+    font-size: 15px;
+    font-weight: 400;
+    margin: 0 0 8px;
+}
+.azp-product-grid .woocommerce-loop-product__title a:hover{ color: #0097A7; }
+.azp-product-grid del{
+	margin-right: 5px;
+	color: #7a7a7a;
+	font-size: 14px;
+}
+.azp-product-grid ins{
+	background: none;
+}
+.azp-product-grid .add_to_cart_button{
+	color: #000;
+    font-size: 14px;
+    text-align: center;
+    padding: 7px 15px;
+    border-radius: 0;
+    transition: all 0.3s ease;
+    border: 1px solid #000;
+    display: inline-block;
+    text-decoration: none;
+    position: relative;
+}
+.azp-product-grid .add_to_cart_button:hover{
+	background: #cd1b29;
+	color: #fff;
+	border: 1px solid #cd1b29;
+}
+.azp-product-grid .add_to_cart_button.loading,
+.azp-product-grid .add_to_cart_button.added{
+    opacity: 0.25;
+    padding-right: 2.618em;
+}
+.azp-product-grid .add_to_cart_button.added{
+    opacity: 1;
+}
+.azp-product-grid .add_to_cart_button.loading::after,
+.azp-product-grid .add_to_cart_button.added::after{
+    font-family: "WooCommerce";
+    vertical-align: top;
+    font-weight: 400;
+    position: absolute;
+    top: 0.550em;
+    right: 1em;
+}
+.azp-product-grid .add_to_cart_button.loading::after{
+    animation: spin 2s linear infinite;
+    content: "\e01c";
+}
+.azp-product-grid .add_to_cart_button.added::after{
+    content: "\e017";
+}
+.azp-product-grid .added_to_cart{
+    font-size: 15px;
+    font-weight: 400;
+    margin-left: 8px;
+}
+
+/*style 2*/
+.azp-product-grid.style--2 .add_to_cart_button{
+	color: #fff;
+	background-color: transparent;
+	font-size: 14px;
+	text-align: center;
+	width: 150px;
+	padding: 10px 15px;
+	border-radius: 0;
+	transform: translateX(-50%);
+	position: absolute;
+	left: 50%;
+	transition: all 0.3s ease;
+	opacity: 0;
+	bottom: -50px;
+	border: 1px solid #fff;
+}
+.azp-product-grid.style--2 .azp-product-image-wrapper:hover .add_to_cart_button{
+    opacity: 1;
+    bottom: 15px;
+    text-decoration: none;
+    z-index: 1;
+}
+.azp-product-grid.style--2 .add_to_cart_button:hover{
+	background: #cd1b29;
+	border: 1px solid #cd1b29;
+}
