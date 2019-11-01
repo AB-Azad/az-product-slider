@@ -1,0 +1,11 @@
+tr.azpswc-separator {
+    border-bottom: 1px solid #ccc;
+}
+tr.azpswc-separator label {
+    font-weight: bold;
+    line-height: 1;
+    font-size: 16px;
+}
+tr.azpswc-separator td{
+    display: none;
+}
