@@ -5,7 +5,7 @@ Plugin URI: http://demo.azplugins.com/product-slider/
 Description: This plugin will allow you to show your WooCommerce store's product as a slider anywhere of your website. You can change color & other settings from <a href="options-general.php?page=azpswc_options">Option Panel</a>
 Author: turje24
 Author URI: https://azplugins.com
-Version: 0.0.5
+Version: 1.0.0
 */
 
 /*Some Set-up*/
@@ -296,6 +296,7 @@ function azpswc_product_slider_sc( $attributes ){
          'ids'        => '',
          'orderby'        => '',
          'order'        => '',
+         'image_size'        => '',
     );
     extract(shortcode_atts($shortcode_att_defaults, $attributes));
 
@@ -482,7 +483,7 @@ function azpswc_product_slider_sc( $attributes ){
         'md_desktop_breakpoint'  => 1199,
     );
 
-    $slick_settings = shortcode_atts($slick_setting_defaults, $atts);
+    $slick_settings = shortcode_atts($slick_setting_defaults, $attributes);
     $slick_settings = wp_json_encode($slick_settings);
     ob_start();
     ?>
@@ -492,7 +493,10 @@ function azpswc_product_slider_sc( $attributes ){
             <?php
             if($wp_query->have_posts()):
                 while ( $wp_query->have_posts() ) : $wp_query->the_post();
-                    $image_size = 'woocommerce_thumbnail';
+                    if(!$image_size){
+                        $image_size = apply_filters('azpswc_image_size', 'woocommerce_thumbnail');
+                    }
+                   
             ?>
                 <div <?php wc_product_class('azpswc-col-md-4 azpswc-product-grid style--'. $style) ?>>
                     <div class="azpswc-product-image-wrapper">

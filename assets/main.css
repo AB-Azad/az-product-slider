@@ -138,7 +138,7 @@
     font-size: inherit;
     line-height: inherit;
     transition: all 0.3s ease;
-    border: 1px solid;
+    border: 1px solid #000;
 }
 .azpswc-product-slider-area .slick-dots li:hover button,
 .azpswc-product-slider-area .slick-dots li.slick-active button{
