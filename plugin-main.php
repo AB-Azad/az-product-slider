@@ -3,10 +3,14 @@
 Plugin Name: AZ Product Slider For WooCommerce
 Plugin URI: http://demo.azplugins.com/product-slider/
 Description: This plugin will allow you to show your WooCommerce store's product as a slider anywhere of your website. You can change color & other settings from <a href="options-general.php?page=azpswc_options">Option Panel</a>
-Author: turje24
+Author: AZ Plugins
 Author URI: https://azplugins.com
 Version: 1.0.0
+Text Domain: azpswc
+Domain Path: /languages
 */
+
+if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 
 /*Some Set-up*/
 define('AZPSWC_PL_ROOT_URL', WP_PLUGIN_URL . '/' . plugin_basename( dirname(__FILE__) ) . '/' );
@@ -17,6 +21,12 @@ define('AZPSWC_PL_VERSION', '0.0.1');
 require_once( AZPSWC_PL_ROOT_DIR. '/includes/helper-functions.php');
 require_once( AZPSWC_PL_ROOT_DIR. '/admin/class.settings-api.php');
 require_once( AZPSWC_PL_ROOT_DIR. '/admin/plugin-options.php');
+
+/* load text domain  */
+function azpswc_load_textdomain() {
+    load_plugin_textdomain( 'azpswc', false, dirname( plugin_basename( __FILE__ ) ) . '/languages/' );
+}
+add_action( 'init', 'azpswc_load_textdomain' );
 
 /* WooCommerce active/install notice */
 function azpswc_plugin_install_active_notice(){

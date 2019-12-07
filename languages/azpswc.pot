@@ -1,0 +1,256 @@
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: AZ Product Slider For WooCommerce\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-12-07 17:41+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: \n"
+"Language: \n"
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Loco https://localise.biz/\n"
+"X-Loco-Version: 2.3.1; wp-5.2.4"
+
+#. 1: Plugin name 2: WooCommerce
+#: plugin-main.php:54
+#, php-format
+msgid "\"%1$s\" requires \"%2$s\" to be installed and activated."
+msgstr ""
+
+#: plugin-main.php:43
+msgid "Activate WooCommerce"
+msgstr ""
+
+#: admin/plugin-options.php:187
+msgid "Add To Cart Button"
+msgstr ""
+
+#: admin/plugin-options.php:249
+msgid "Arrow Bg Color"
+msgstr ""
+
+#: admin/plugin-options.php:263
+msgid "Arrow Border Color"
+msgstr ""
+
+#: admin/plugin-options.php:270
+msgid "Arrow Hover BG Color"
+msgstr ""
+
+#: admin/plugin-options.php:277
+msgid "Arrow Hover Icon Color"
+msgstr ""
+
+#: admin/plugin-options.php:256
+msgid "Arrow Icon Color"
+msgstr ""
+
+#: admin/plugin-options.php:292
+msgid "Arrow Next Class"
+msgstr ""
+
+#: admin/plugin-options.php:284
+msgid "Arrow Prev Class"
+msgstr ""
+
+#. Author of the plugin
+msgid "AZ Plugins"
+msgstr ""
+
+#: admin/plugin-options.php:29
+msgid "AZ Product Options"
+msgstr ""
+
+#: plugin-main.php:55
+msgid "AZ Product Slider"
+msgstr ""
+
+#. Name of the plugin
+msgid "AZ Product Slider For WooCommerce"
+msgstr ""
+
+#: admin/plugin-options.php:36
+msgid "AZ Product Slider Options"
+msgstr ""
+
+#: admin/plugin-options.php:193
+msgid "Button Background Color"
+msgstr ""
+
+#: admin/plugin-options.php:207
+msgid "Button Border Color"
+msgstr ""
+
+#: admin/plugin-options.php:214
+msgid "Button Hover Background Color"
+msgstr ""
+
+#: admin/plugin-options.php:228
+msgid "Button Hover Border Color"
+msgstr ""
+
+#: admin/plugin-options.php:221
+msgid "Button Hover Text Color"
+msgstr ""
+
+#: admin/plugin-options.php:235
+msgid "Button margin"
+msgstr ""
+
+#: admin/plugin-options.php:200
+msgid "Button Text Color"
+msgstr ""
+
+#: admin/plugin-options.php:171
+msgid "Current Price Font Size"
+msgstr ""
+
+#: admin/plugin-options.php:164
+msgid "Current Price Text Color"
+msgstr ""
+
+#: admin/plugin-options.php:320
+msgid "Dots Active Background Color"
+msgstr ""
+
+#: admin/plugin-options.php:327
+msgid "Dots Active Border Color"
+msgstr ""
+
+#: admin/plugin-options.php:306
+msgid "Dots Background Color"
+msgstr ""
+
+#: admin/plugin-options.php:313
+msgid "Dots Border Color"
+msgstr ""
+
+#: admin/plugin-options.php:334
+msgid "Dots Margin"
+msgstr ""
+
+#: admin/plugin-options.php:100 admin/plugin-options.php:157
+#: admin/plugin-options.php:172
+msgid "Example: 24px"
+msgstr ""
+
+#: admin/plugin-options.php:59 admin/plugin-options.php:108
+#: admin/plugin-options.php:136 admin/plugin-options.php:180
+#: admin/plugin-options.php:236 admin/plugin-options.php:335
+msgid "Example: 5px 0px 5px 0px (Indicates: top right bottom left)"
+msgstr ""
+
+#: admin/plugin-options.php:285
+msgid "Example: fa fa-angle-left"
+msgstr ""
+
+#: admin/plugin-options.php:293
+msgid "Example: fa fa-angle-right"
+msgstr ""
+
+#. URI of the plugin
+msgid "http://demo.azplugins.com/product-slider/"
+msgstr ""
+
+#. Author URI of the plugin
+msgid "https://azplugins.com"
+msgstr ""
+
+#: plugin-main.php:49
+msgid "Install WooCommerce"
+msgstr ""
+
+#: plugin-main.php:546
+msgid "No Products found!"
+msgstr ""
+
+#: admin/plugin-options.php:66
+msgid "OnSale Label"
+msgstr ""
+
+#: admin/plugin-options.php:72
+msgid "Onsale Label BG Color"
+msgstr ""
+
+#: admin/plugin-options.php:79
+msgid "Onsale Label Text Color"
+msgstr ""
+
+#: admin/plugin-options.php:156
+msgid "Previous Price Font Size"
+msgstr ""
+
+#: admin/plugin-options.php:149
+msgid "Previous Price Text Color"
+msgstr ""
+
+#: admin/plugin-options.php:179
+msgid "Price Margin"
+msgstr ""
+
+#: admin/plugin-options.php:52
+msgid "Product Item"
+msgstr ""
+
+#: admin/plugin-options.php:58
+msgid "Product Item Margin"
+msgstr ""
+
+#: admin/plugin-options.php:143
+msgid "Product Price"
+msgstr ""
+
+#: admin/plugin-options.php:115
+msgid "Product Rating"
+msgstr ""
+
+#: admin/plugin-options.php:86
+msgid "Product Title"
+msgstr ""
+
+#: admin/plugin-options.php:121
+msgid "Rating Color"
+msgstr ""
+
+#: admin/plugin-options.php:128
+msgid "Rating Empty Color"
+msgstr ""
+
+#: admin/plugin-options.php:135
+msgid "Rating Margin"
+msgstr ""
+
+#: admin/plugin-options.php:243
+msgid "Slider Arrow"
+msgstr ""
+
+#: admin/plugin-options.php:300
+msgid "Slider Dots"
+msgstr ""
+
+#. Description of the plugin
+msgid ""
+"This plugin will allow you to show your WooCommerce store's product as a "
+"slider anywhere of your website. You can change color & other settings from "
+"<a href=\"options-general.php?page=azpswc_options\">Option Panel</a>"
+msgstr ""
+
+#: admin/plugin-options.php:99
+msgid "Title Font Size"
+msgstr ""
+
+#: admin/plugin-options.php:107
+msgid "Title Margin"
+msgstr ""
+
+#: admin/plugin-options.php:92
+msgid "Title Text Color"
+msgstr ""
+
+#: plugin-main.php:56
+msgid "WooCommerce"
+msgstr ""
