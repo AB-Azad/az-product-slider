@@ -5,30 +5,38 @@ Plugin URI: http://demo.azplugins.com/product-slider/
 Description: This plugin will allow you to show your WooCommerce store's product as a slider anywhere of your website. You can change color & other settings from <a href="options-general.php?page=azpswc_options">Option Panel</a>
 Author: AZ Plugins
 Author URI: https://azplugins.com
-Version: 1.0.0
+Version: 1.0.4
 Text Domain: azpswc
 Domain Path: /languages
 */
 
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 
-/*Some Set-up*/
+/**
+ * Some Set-up
+ */
 define('AZPSWC_PL_ROOT_URL', WP_PLUGIN_URL . '/' . plugin_basename( dirname(__FILE__) ) . '/' );
 define('AZPSWC_PL_ROOT_DIR', dirname( __FILE__ ) );
-define('AZPSWC_PL_VERSION', '0.0.1');
+define('AZPSWC_PL_VERSION', '1.0.4');
 
-/* Include all files */
+/**
+ * Include all files
+ */
 require_once( AZPSWC_PL_ROOT_DIR. '/includes/helper-functions.php');
 require_once( AZPSWC_PL_ROOT_DIR. '/admin/class.settings-api.php');
 require_once( AZPSWC_PL_ROOT_DIR. '/admin/plugin-options.php');
 
-/* load text domain  */
+/**
+ * load text domain
+ */
 function azpswc_load_textdomain() {
     load_plugin_textdomain( 'azpswc', false, dirname( plugin_basename( __FILE__ ) ) . '/languages/' );
 }
 add_action( 'init', 'azpswc_load_textdomain' );
 
-/* WooCommerce active/install notice */
+/**
+ * WooCommerce active/install notice
+ */
 function azpswc_plugin_install_active_notice(){
     if(class_exists('woocommerce')){
         return;
@@ -59,9 +67,11 @@ function azpswc_plugin_install_active_notice(){
 }
 add_action( 'admin_notices', 'azpswc_plugin_install_active_notice' );
 
-/* Enqueue scripts */
+/**
+ * Enqueue scripts
+ */
 function azpswc_scripts() {
-    //Latest jQuery from WordPress
+   // Latest jQuery from WordPress
     wp_enqueue_script('jquery');
 
     // Load fontawesome icons
@@ -83,13 +93,17 @@ function azpswc_scripts() {
 }
 add_action( 'wp_enqueue_scripts', 'azpswc_scripts', 15 );
 
-/* Admin enqueue scripts */
+/**
+ * Admin enqueue scripts
+ */
 function azpswc_admin_scripts(){
     wp_enqueue_style( 'azpswc-admin', AZPSWC_PL_ROOT_URL.'assets/admin.css');
 }
 add_action( 'admin_enqueue_scripts', 'azpswc_admin_scripts');
 
-/* Dynamic Style */
+/**
+ * Dynamic Style
+ */
 function azpswc_inline_css() {
     $custom_css = array();
 
@@ -288,7 +302,9 @@ function azpswc_inline_css() {
 }
 add_action( 'wp_enqueue_scripts', 'azpswc_inline_css', 15 );
 
-/* Product slider shortcode */
+/**
+ * Product slider shortcode
+ */
 function azpswc_shortcodes_init(){
     add_shortcode( 'azpswc_product_slider', 'azpswc_product_slider_sc' );
 }
@@ -551,4 +567,20 @@ function azpswc_product_slider_sc( $attributes ){
 
     <?php
     return ob_get_clean();
+}
+
+
+/**
+ * Add settings page link
+ */
+add_filter('plugin_action_links_az-product-slider/plugin-main.php', 'azpswc_settings_page_link_add', 10, 4);
+function azpswc_settings_page_link_add( $actions, $plugin_file, $plugin_data, $context ){
+    $new_link = sprintf( '<a href="%s">%s</a>',
+        esc_url( get_admin_url() . 'admin.php?page=azpswc_options' ),
+        esc_html__( 'Settings', 'azpswc' )
+    );
+
+    array_unshift( $actions, $new_link );
+
+    return $actions;
 }

@@ -26,7 +26,7 @@ class AZPSWC_Settings {
     }
 
     function admin_menu() {
-        add_submenu_page( 'options-general.php', esc_html__('AZ Product Options', 'azpswc'), esc_html__('AZ Product Options', 'azpswc'), 'manage_options', 'azpswc_options', array($this, 'plugin_page') );
+        add_submenu_page( 'woocommerce', esc_html__('AZ Product Options', 'azpswc'), esc_html__('AZ Product Options', 'azpswc'), 'manage_options', 'azpswc_options', array($this, 'plugin_page') );
     }
 
     function get_settings_sections() {
