@@ -9,3 +9,8 @@ tr.azpswc-separator label {
 tr.azpswc-separator td{
     display: none;
 }
+
+.azpswc_btn_pro{
+	font-weight: bold;
+	color: Red;
+}

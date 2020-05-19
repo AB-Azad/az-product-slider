@@ -5,7 +5,7 @@ Plugin URI: http://demo.azplugins.com/product-slider/
 Description: This plugin will allow you to show your WooCommerce store's product as a slider anywhere of your website. You can change color & other settings from <a href="options-general.php?page=azpswc_options">Option Panel</a>
 Author: AZ Plugins
 Author URI: https://azplugins.com
-Version: 1.0.4
+Version: 1.0.5
 Text Domain: azpswc
 Domain Path: /languages
 */
@@ -17,7 +17,7 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
  */
 define('AZPSWC_PL_ROOT_URL', WP_PLUGIN_URL . '/' . plugin_basename( dirname(__FILE__) ) . '/' );
 define('AZPSWC_PL_ROOT_DIR', dirname( __FILE__ ) );
-define('AZPSWC_PL_VERSION', '1.0.4');
+define('AZPSWC_PL_VERSION', '1.0.5');
 
 /**
  * Include all files
@@ -571,16 +571,25 @@ function azpswc_product_slider_sc( $attributes ){
 
 
 /**
- * Add settings page link
+ * Add action links
  */
-add_filter('plugin_action_links_az-product-slider/plugin-main.php', 'azpswc_settings_page_link_add', 10, 4);
-function azpswc_settings_page_link_add( $actions, $plugin_file, $plugin_data, $context ){
-    $new_link = sprintf( '<a href="%s">%s</a>',
+add_filter('plugin_action_links_az-product-slider/plugin-main.php', 'azpswc_action_links_add', 10, 4);
+function azpswc_action_links_add( $actions, $plugin_file, $plugin_data, $context ){
+
+    $settings_page_link = sprintf( '<a href="%s">%s</a>',
         esc_url( get_admin_url() . 'admin.php?page=azpswc_options' ),
         esc_html__( 'Settings', 'azpswc' )
     );
 
-    array_unshift( $actions, $new_link );
+    $pro_link = sprintf( '<a href="%s" class="azpswc_btn_pro" target="_blank">%s</a>',
+        esc_url( '//codecanyon.net/item/az-product-slider-pro-for-woocommerce/25497176' ),
+        esc_html__( 'Go Pro', 'azpswc' )
+    );
+
+
+    array_unshift( $actions, $settings_page_link );
+
+    $actions[] = $pro_link;
 
     return $actions;
 }
