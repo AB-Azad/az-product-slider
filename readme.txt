@@ -20,7 +20,7 @@ Need help to use this plugin?
 Please feel free to contact us [Here](https://azplugins.com/contact-us/)
 
 == Features: ==
-* Shortcode ready
+* Shortcode ready 
 * Columns support
 * 2 different product styles
 * Category Slider [Pro](http://bit.ly/35K4TDb)
